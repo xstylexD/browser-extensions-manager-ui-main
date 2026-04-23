@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -25,13 +25,23 @@
     <main class="main__container">
       <div class="extensions">
         <img src="./src/img/logo.svg" alt="Logo" class="extensions__logo" />
-        <img src="./src/img/icon-moon.svg" alt="Dark theme" class="extensions__theme" />
+
+        <button class="theme__btn">
+          <img
+            src="./src/img/icon-moon.svg"
+            alt="Dark theme"
+            class="extensions__theme-light"
+          />
+          <img
+            src="./src/img/icon-sun.svg"
+            alt="light theme"
+            class="extensions__theme-dark hidden"
+          />
+        </button>
       </div>
 
       <nav class="navigations">
-        <h1 class="navigations__title">
-          Extensions List
-        </h1>
+        <h1 class="navigations__title">Extensions List</h1>
         <ul class="navigations__wrapper">
           <li class="navigations__item navigations__item-active">All</li>
           <li class="navigations__item">Active</li>
@@ -40,76 +50,29 @@
       </nav>
 
       <div class="plugins">
-        <div class="plugins__item">
+        <!-- <div class="plugins__item">
           <div class="plugins__wrapper">
-            <img src="./src/img/logo-devlens.svg" alt="DevLens" class="plugins__logo">
-          <div class="plugins__head">
-            <h2 class="plugins__title">DevLens</h2>
-            <p class="plugins__descr">Quickly inspect page layouts and visualize element boundaries.</p>
-          </div>
-
+            <img
+              src="./src/img/logo-devlens.svg"
+              alt="DevLens"
+              class="plugins__logo"
+            />
+            <div class="plugins__head">
+              <h2 class="plugins__title">DevLens</h2>
+              <p class="plugins__descr">
+                Quickly inspect page layouts and visualize element boundaries.
+              </p>
+            </div>
           </div>
           <div class="plugins__nav">
             <button class="plugins__remove">Remove</button>
             <label class="plugins__switch">
-              <input type="checkbox">
+              <input type="checkbox" />
               <span class="plugins__slider"></span>
             </label>
           </div>
-        </div>
-           <div class="plugins__item">
-          <div class="plugins__wrapper">
-            <img src="./src/img/logo-devlens.svg" alt="DevLens" class="plugins__logo">
-          <div class="plugins__head">
-            <h2 class="plugins__title">DevLens</h2>
-            <p class="plugins__descr">Quickly inspect page layouts and visualize element boundaries.</p>
-          </div>
-
-          </div>
-          <div class="plugins__nav">
-            <button class="plugins__remove">Remove</button>
-            <label class="plugins__switch">
-              <input type="checkbox">
-              <span class="plugins__slider"></span>
-            </label>
-          </div>
-        </div>
-           <div class="plugins__item">
-          <div class="plugins__wrapper">
-            <img src="./src/img/logo-devlens.svg" alt="DevLens" class="plugins__logo">
-          <div class="plugins__head">
-            <h2 class="plugins__title">DevLens</h2>
-            <p class="plugins__descr">Quickly inspect page layouts and visualize element boundaries.</p>
-          </div>
-
-          </div>
-          <div class="plugins__nav">
-            <button class="plugins__remove">Remove</button>
-            <label class="plugins__switch">
-              <input type="checkbox">
-              <span class="plugins__slider"></span>
-            </label>
-          </div>
-        </div>
-           <div class="plugins__item">
-          <div class="plugins__wrapper">
-            <img src="./src/img/logo-devlens.svg" alt="DevLens" class="plugins__logo">
-          <div class="plugins__head">
-            <h2 class="plugins__title">DevLens</h2>
-            <p class="plugins__descr">Quickly inspect page layouts and visualize element boundaries.</p>
-          </div>
-
-          </div>
-          <div class="plugins__nav">
-            <button class="plugins__remove">Remove</button>
-            <label class="plugins__switch">
-              <input type="checkbox">
-              <span class="plugins__slider"></span>
-            </label>
-          </div>
-        </div>
+        </div> -->
       </div>
-      
     </main>
 
     <footer class="attribution">

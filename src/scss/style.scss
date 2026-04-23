@@ -1,0 +1,221 @@
+html {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.attribution {
+  font-size: 0.6875rem;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+$Neutral-0: hsl(200, 60%, 99%);
+$Neutral-100: hsl(0, 0%, 93%);
+$Neutral-200: hsl(217, 61%, 90%);
+$Neutral-300: hsl(0, 0%, 78%);
+$Neutral-800: hsl(226, 25%, 17%);
+
+$Red-700: hsl(3, 77%, 44%);
+
+.main__container {
+    display: flex;
+    flex-direction: column;
+     background-color: $Neutral-200;
+ padding: 15px;
+ width: 100%;
+}
+
+@media screen and (min-width: 1440px) {
+    .main__container {
+        padding: 50px 100px;
+    }
+}
+
+.extensions {
+background-color: $Neutral-0;
+padding: 10px;
+display: flex;
+justify-content: space-between;
+border-radius: 10px;
+&__theme {
+    background-color: $Neutral-300;
+    width: 50px;
+    height: 50px;
+    padding: 15px;
+    border-radius: 10px;
+}
+}
+
+
+
+.navigations {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__title {
+        font-weight: 700;
+        color: $Neutral-800;
+    }
+
+    &__wrapper {
+        margin-top: 15px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        align-items: center;
+        width: 100%;
+    }
+
+    &__item {
+        list-style-type: none;
+        background-color: $Neutral-0;
+        padding: 7px 15px;
+        border-radius: 20px;
+        font-weight: 400;
+        border: 1px solid $Neutral-300;
+        color: $Neutral-800;
+        cursor: pointer;
+    }
+
+    &__item-active {
+        background-color: $Red-700;
+        color: $Neutral-0;
+    }
+}
+@media screen and (min-width: 1440px) {
+    .navigations {
+        flex-direction: row;
+        justify-content: space-between;
+           &__wrapper {
+        width: inherit;
+        }
+    }
+}
+
+.plugins {
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    color: $Neutral-800;
+    gap: 10px;
+
+ &__item {
+       background-color: $Neutral-0;
+    padding: 15px;
+    border-radius: 10px;
+    width: 100%;
+    min-height: 150px;
+ }
+
+ &__wrapper {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start
+ }
+
+ &__head {
+    display: flex;
+    flex-direction: column;
+ }
+
+ &__title {
+    font-weight: 700;
+ }
+ &__descr {
+    font-size: 12px;
+    font-weight: 500;
+ }
+
+ &__nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    align-items: center;
+ }
+
+ &__remove {
+    background-color: $Neutral-0;
+    padding: 7px 15px;
+    border-radius: 20px;
+    font-weight: 500;
+    border: 1px solid $Neutral-300;
+    color: $Neutral-800;
+    cursor: pointer;
+ }
+
+ &__switch {
+  position: relative;
+  display: inline-block;
+    width: 38px;
+    height: 22px;
+}
+
+/* Скрываем стандартный чекбокс */
+&__switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Фон переключателя */
+&__slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 15px;
+}
+
+/* Ползунок */
+&__slider:before {
+  position: absolute;
+  content: "";
+ height: 15px;
+    width: 15px;
+    left: 4px;
+    bottom: 3px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+/* Изменение фона при чекбоксе включенном (checked) */
+input:checked + &__slider {
+  background-color: $Red-700;
+}
+
+/* Перемещение ползунка при checked */
+input:checked + &__slider:before {
+  transform: translateX(15px);
+}
+}
+
+@media screen and (min-width: 1440px) {
+    .plugins {
+        flex-direction: row;
+        gap: 15px;
+        justify-content: start;
+        flex-wrap:wrap;
+&__item {
+    width: auto;
+}
+
+&__descr {
+    min-width: 356px;
+}
+    }
+}
